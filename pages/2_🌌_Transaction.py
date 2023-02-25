@@ -11,7 +11,7 @@ week_days = ['Monday', 'Tuesday', 'Wednesday',
              'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Layout
-st.set_page_config(page_title='Transactions - The Whales of Near',
+st.set_page_config(page_title='Transactions - Insight of The Week',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title('🌌 Transactions')
 
@@ -40,10 +40,14 @@ df4 = Transactions_VS_Prices
 ######################################################################################################################
 
 
-st.write(""" ### Transaction Concept ##  """)
+st.write(""" ### Crypto Transaction Concept ##  """)
 
 st.write("""
-A Simply put, cryptocurrency transaction is a transfer of information made between blockchain addresses. These transfers have to be signed with a private key that corresponds to its address. Signed transactions are broadcast to the network of nodes, active computers that follow a specific set of rules to validate transactions and blocks. Valid transactions need to be confirmed by being included in blocks through the process of mining.[[7]](https://www.bitstamp.net/learn/crypto-101/how-do-cryptocurrency-transactions-work/)   """)
+Cryptocurrency transaction is a transfer of information made between blockchain addresses. These transfers have to be signed with a private key that corresponds to its address. Signed transactions are broadcast to the network of nodes, active computers that follow a specific set of rules to validate transactions and blocks. Valid transactions need to be confirmed by being included in blocks through the process of mining.[[7]](https://www.bitstamp.net/learn/crypto-101/how-do-cryptocurrency-transactions-work/)     
+
+In this section, we looked into whether or not the 21% price increase had a considerable impact on NEAR transactions.
+
+""")
 
 
 st.info(""" ##### In This Transaction Section you can find: ####
@@ -64,7 +68,9 @@ st.text(" \n")
 st.write(
     """ ## Price Change Impact on Transaction Activity [Time Intervals] """)
 
+st.write(""" In the hourly and daily charts, it is clear that on February 11, when the NEAR price hit a low of 2.16, the number of transactions dramatically reduced. And on February 14 at 5:00 AM, there was a two-hour hype in the number of transactions, which peaked at 35k hourly transactions just before the price began to rise. This hype did not last the rest of the day, as the total number of transactions on February 14  was 400k, which was even lower than the previous day. It was observed that the hourly number of transactions dramatically increased for a few hours before any abrupt price shift, whether bullish or bearish. The shift in the equilibrium between supply and demand brought on by the increase or decrease in the price of Bitcoin and Ethereum could be the cause of these hypes.
 
+""")
 interval = st.radio('**Time Interval**',
                     ['Hourly', 'Daily', 'Weekly'], key='fees_interval', horizontal=True)
 
@@ -91,7 +97,7 @@ if st.session_state.fees_interval == 'Daily':
     fig.add_trace(go.Line(x=df3["DAY"], y=df3["CUMULATIVE_FEE_DAILY"],
                           name='CUMULATIVE Fee'), secondary_y=True)
     fig.update_layout(
-        title_text='Daily Transaction Fees with Cumulative Value')
+        title_text='Daily Transaction Fees with Cumulative Value [NEAR]')
     fig.update_yaxes(
         title_text='Total Fee', secondary_y=False)
     fig.update_yaxes(title_text='CUMULATIVE Fee', secondary_y=True)
@@ -127,7 +133,7 @@ elif st.session_state.fees_interval == 'Weekly':
     fig.add_trace(go.Line(x=df3["WEEK"], y=df3["CUMULATIVE_FEE_WEEKLY"],
                           name='CUMULATIVE Fee'), secondary_y=True)
     fig.update_layout(
-        title_text=' Weekly Transaction Fees with Cumulative Value')
+        title_text=' Weekly Transaction Fees with Cumulative Value [NEAR]')
     fig.update_yaxes(
         title_text='Weekly Trnasaction Fee', secondary_y=False)
     fig.update_yaxes(title_text='CUMULATIVE Fee', secondary_y=True)
@@ -164,7 +170,7 @@ elif st.session_state.fees_interval == 'Hourly':
     fig.add_trace(go.Line(x=df3["HOUR"], y=df3["CUMULATIVE_BLOCK_HOURLY"],
                           name='CUMULATIVE Fee'), secondary_y=True)
     fig.update_layout(
-        title_text='Hourly Transaction Fees with Cumulative Value')
+        title_text='Hourly Transaction Fees with Cumulative Value [NEAR]')
     fig.update_yaxes(
         title_text='Hourly Fee', secondary_y=False)
     fig.update_yaxes(title_text='CUMULATIVE Fee', secondary_y=True)
@@ -212,7 +218,7 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 st.text(" \n")
 
-st.info(""" #### Key findings: ####
+st.info(""" #### Summary: ####
 
  * On February 11 when NEAR price hit the a low of 2.16 the Number of Transactions droped significantly
  * On the other hand the Transaction Fees was relatively high on very same day

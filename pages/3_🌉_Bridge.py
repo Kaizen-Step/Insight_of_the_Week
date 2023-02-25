@@ -11,7 +11,7 @@ week_days = ['Monday', 'Tuesday', 'Wednesday',
              'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Layout
-st.set_page_config(page_title='Bridge - Up the Mountain',
+st.set_page_config(page_title='Bridge - Insight of the Week',
                    page_icon=':bar_chart:', layout='wide')
 st.title('🌉 Bridge')
 
@@ -43,7 +43,10 @@ st.write(""" ### Bridge Concept ##  """)
 
 st.write("""
 A blockchain bridge is a tool that lets you port assets from one blockchain to another, solving one of the main pain points within blockchains – a lack of interoperability.
-Since blockchain assets are often not compatible with one another, bridges create synthetic derivatives that represent an asset from another blockchain.Some bridges, known as unidirectional or one-way bridges, allow you to port assets only to the target blockchain and not the other way around.Other bridges like Wormhole and Multichain are bidirectional, or two-way, meaning you can freely convert assets to and from blockchains. [[8]](https://www.coindesk.com/learn/what-are-blockchain-bridges-and-how-do-they-work/)   """)
+Since blockchain assets are often not compatible with one another, bridges create synthetic derivatives that represent an asset from another blockchain.Some bridges, known as unidirectional or one-way bridges, allow you to port assets only to the target blockchain and not the other way around.Other bridges like Wormhole and Multichain are bidirectional, or two-way, meaning you can freely convert assets to and from blockchains. [[8]](https://www.coindesk.com/learn/what-are-blockchain-bridges-and-how-do-they-work/)   
+  
+Here, we investigated if the price increase would be sufficient to persuade people to bridge to NEAR Blockchain.
+  """)
 
 
 st.info(""" ##### In This Bridge Section you can find: ####
@@ -60,6 +63,8 @@ st.info(""" ##### In This Bridge Section you can find: ####
 #################################################################################################
 st.write(""" ## Rainbow Bridge to NEAR Number of Transactions """)
 
+st.write(""" On February 11, which was previously discussed as the day the NEAR price hit its monthly low, there was no bridge transaction. Moreover, February 12 came in second-to-last, while February 15—the day with the most bridge transactions to NEAR—saw a notable increase in the price of NEAR. 53% of these transaction was from USDC follow by USDT with 17% . As you can see, the number of bridge transactions on February 18 was the same as February 8 and 6, and the number of bridge transactions on the first week of the period when NEAR experienced a significant fall was not lower than February 16, which was the day after NEAR increased. As a result, this increase did not significantly alter the rhythm other than for one or two hype days.
+""")
 # Daily Bridge Transactions
 fig = px.bar(df.sort_values(["DATE", "NUMBER_TRANSACTIONS"], ascending=[
     True, False]), x="DATE", y="NUMBER_TRANSACTIONS", color="SYMBOL", title='Daily Number of Bridge transactions from Ethereum to NEAR by Token')
@@ -86,7 +91,8 @@ with c2:
 
 
 st.write(""" ## Rainbow Bridge to NEAR Volume [USD] """)
-
+st.write(""" Although the NEAR price had little impact on the number of bridge transactions, the volume of bridge transactions was directly influenced, as the February 12 bridge volume was less than 2k, while February 15 bridge volume hit a record of half milion USD. Also, USDC ranked first in volume of bridges with 1.5 million (more than 85% of total bridges).
+""")
 # Daily Bridge Transactions
 fig = px.bar(df.sort_values(["DATE", "USD_VOLUME"], ascending=[
     True, False]), x="DATE", y="USD_VOLUME", color="SYMBOL", title='Daily Volume (USD) of Bridge Transactions from Ethereum to NEAR by Token')
@@ -112,10 +118,11 @@ with c2:
 
 
 st.write(""" ## Rainbow Bridge to NEAR Number of Users """)
-
+st.write(""" The number of users who bridge Ethereum to NEAR was also affected by the NEAR price, but this effect was not massive as far as volume; as you can see, the number of users even dropped after the NEAR rise and mostly showed a sinusoidal pattern.
+""")
 # Daily Bridge Transactions
 fig = px.bar(df.sort_values(["DATE", "UNIQUE_WALLETS_FROM"], ascending=[
-    True, False]), x="DATE", y="UNIQUE_WALLETS_FROM", color="SYMBOL", title='Daily USERs of Bridge from Ethereum to NEAR by Token')
+    True, False]), x="DATE", y="UNIQUE_WALLETS_FROM", color="SYMBOL", title='Daily Users of Bridge from Ethereum to NEAR by Token')
 fig.update_layout(legend_title=None, xaxis_title=None,
                   yaxis_title='Daily Transaction')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
@@ -124,7 +131,7 @@ c1, c2 = st.columns(2)
 with c1:
     # Weekly Bridge Transactions
     fig = px.bar(df2.sort_values(["DATE", "UNIQUE_WALLETS_FROM"], ascending=[
-        True, False]), x="DATE", y="UNIQUE_WALLETS_FROM", color="SYMBOL", title='Weekly USERs of Bridge from Ethereum to NEAR by Token')
+        True, False]), x="DATE", y="UNIQUE_WALLETS_FROM", color="SYMBOL", title='Weekly Users of Bridge from Ethereum to NEAR by Token')
     fig.update_layout(legend_title=None, xaxis_title=None,
                       yaxis_title='Weekly Transaction')
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
@@ -141,7 +148,7 @@ with c2:
 
 st.text(" \n")
 
-st.info(""" #### Key Findings: ####
+st.info(""" #### Summary: ####
 
  * USDC was the top token bridged to NEAR with more than 50% of total Number of Bridges
  * USDT and WOO followed USDC wiht a Significant difference  

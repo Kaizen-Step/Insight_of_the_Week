@@ -36,7 +36,8 @@ Despite macroeconomic headwinds and regulatory crackdowns on crypto, Bitcoin has
 The price of BTC then took a big dip in November following the FTX crisis, which saw BTC drop to a 2022 low of 15,742 on Nov. 10. Its price began to surge in early January, increasing over 14 consecutive days from Jan. 4-17. That daily green candle streak was its second longest in the cryptocurrency’s 14-year history — having fallen one day short of its 15-day record set in November 2013.[[2]](https://cointelegraph.com/news/bitcoin-price-hits-25k-in-new-2023-high)
 
 ### Bitcoin Price Correlation With Cryptocurrencies ###
- Bitcoin movement tends to determine the overall direction of crypto currencies, just as the S&P 500 index tends to determine overall stock market direction.This symbiotic relationship means that the value of different crypto currencies is often tied to Bitcoin. As a result, an crypto currencies value is often measured against the price of Bitcoin, so the price of crypto currencies could go down if Bitcoin goes down, and conversely, the price of crypto currencies could go up if Bitcoin goes up. [[3]](3.https://www.linkedin.com/pulse/relationship-between-bitcoin-altcoins-charles-j-phua/)
+ Bitcoin movement tends to determine the overall direction of crypto currencies, just as the S&P 500 index tends to determine overall stock market direction.This symbiotic relationship means that the value of different crypto currencies is often tied to Bitcoin. As a result, an crypto currencies value is often measured against the price of Bitcoin, so the price of crypto currencies could go down if Bitcoin goes down, and conversely, the price of crypto currencies could go up if Bitcoin goes up. [[3]](3.https://www.linkedin.com/pulse/relationship-between-bitcoin-altcoins-charles-j-phua/)  
+ 
 
 """)
 c1, c2 = st.columns(2)
@@ -47,25 +48,22 @@ with c2:
 
 st.write("""
 ## Methodology ##  
-The NEAR Foundation is running an "Insight of the Week" series. Keeping your analysis short and focused on excellent-quality visualization - provide the most fascinating or illuminating fact or insight that you can about the NEAR ecosystem, or any of the projects building on NEAR, over the past 7 to 14 days. 
-During the last 14 days, Bitcoin price reached the 25K resistance line; this sudden rise influenced the whole market as well as the NEAR token price, which experienced a sudden rise this week. We try to evaluate this price rising impact on NEAR users' behavior and find the reason behind this rise besides Bitcoin price. To answer these questions, we first monitored NEAR Price during the last 2 weeks and compared it with Bitcoin and Ethereum Prices and also Matic, Solana and Optimism to better understand the market. Also, find a correlation between NEAR price and other tokens. Then we investigate the impact of this NEAR price increase on Transactions on the NEAR blockchain and Bridges to NEAR and does it attract a significant number of new comers or not. Finally, we monitor the top 20 whales on NEAR  during the last 14 days' transactions to and from CEX exchanges to find patterns that confirm the price rise. In this dashboard, we used "near.core.fact_transactions" and "near.core.fact_transactions" to caculate transactions and label them. We use "near.core.fact_prices" to extract hourly NEAR prices for comparison. All the Metrice presented in this dashboard are calculated from "2023-02-05" up until "2023-02-20".
-I am a civil engineer who is trying to be a student in the Data analyst world; please let me know your idea about the project and help me to stand on a shoulder of giants. 
 
+The price of Bitcoin surged sharply during the past 14 days, hitting the 25K resistance line. This abrupt increase had an impact on the entire market as well as this week's sharp increase in the price of the NEAR token.The data above from last week show how NEAR pricing followed Bitcoin's upward trend and increased by more than 21% over the course of the week. As weekly "Insight of the Week" series is being run by the NEAR Foundation, We decided to take steps to investigate if whether increased price has an effect on how NEAR users behave and to identify any additional factors that may be contributing to it. In order to better comprehend the market, we first tracked the NEAR Price during the previous two weeks and compared it to the prices of Bitcoin and Ethereum as well as Matic, Solana, and Optimism, and try to find a correlation between the NEAR Price and other tokens. Then, we examine whether or not this NEAR price rise has an appreciable influence on transactions made on the NEAR blockchain and bridges to NEAR. Finally, we look for patterns that support the price increase by tracking the top 20 whales on NEAR over the course of the previous 14 days' transactions to and from CEX exchanges.In this dashboard, we calculated and labelled transactions using the tables "near.core.fact transactions" and "near.core.fact transactions." We extract hourly NEAR prices using "near.core.fact prices" , and all of the metrics shown on this dashboard were calculated between "2023-02-05" and "2023-02-20."
 
 
 
 
 """)
-
+st.text(" \n")
 st.write("""   
 #### Sources ####  """)
 st.write("""    1.https://www.coindesk.com/learn/what-is-near-protocol-and-how-does-it-work/    
         2.https://cointelegraph.com/news/bitcoin-price-hits-25k-in-new-2023-high    
         3.https://www.linkedin.com/pulse/relationship-between-bitcoin-altcoins-charles-j-phua/  
-        4.https://www.youtube.com/watch?v=lyCohdodgo8   
-        5.https://www.coindesk.com/tech/2023/02/08/bitcoin-nfts-explode-in-popularity-as-bitmex-research-shows-13000-ordinals/  
-      
+        4.https://www.youtube.com/watch?v=lyCohdodgo8
               """)
+st.text(" \n")
 c1, c2 = st.columns(2)
 with c2:
     st.info(

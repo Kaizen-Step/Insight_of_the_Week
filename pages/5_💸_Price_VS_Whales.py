@@ -48,14 +48,14 @@ st.write("""
 The community and investors watch crypto whales because they can significantly influence price movements.
 Whales can also create price volatility increases, especially when they move a large quantity of cryptocurrency in one transaction. For example, if an owner is trying to sell their bitcoin for fiat currency, the lack of liquidity and large transaction size creates downward pressure on Bitcoin's price because other market participants see the transaction. When whales sell, other investors go on high alert, watching for indicators that whales are "dumping" their holdings. [[10]](https://www.investopedia.com/terms/b/bitcoin-whale.asp#:~:text=A%20crypto%20whale%20is%20a,also%20create%20price%20volatility%20increases.)  
 
-We gathered Top 20 NEAR Whales and eliminate the exchanges and the custodials wallets. We try to monitor these top 20 Whales activities in this recent price changes (Last 2 weeks).      """)
+Exchanges and custody wallets were taken out before compiling the top 20 NEAR whales. In light of the most recent price changes, we strive to keep an eye on these top 20 whale activities (last 2 weeks).     """)
 
 
 st.info(""" ##### In This Price VS Whales Section you can find: ####
 
 * List of top 20 Whales 
-* Transfer From CEX Impact on NEAR Price
-* Transfer to CEX Impact on NEAR Price
+* Whale Transfer From CEX Impact on NEAR Price
+* Whale Transfer to CEX Impact on NEAR Price
 
 
 """)
@@ -64,6 +64,11 @@ st.info(""" ##### In This Price VS Whales Section you can find: ####
 ######################################################################################
 
 st.write(""" ## List of top 20 Whales and Exchanges and Custodials Excluded """)
+
+st.write(""" By estimating the amount going in and coming out of each wallet, we were able to identify the top 20 whales of NEAR. We next tried to filter out exchanges and custodials to locate only individual whales. The following tables show the final list as well as the list of exchanges that were skipped:
+
+""")
+
 c1, c2 = st.columns(2)
 
 with c2:
@@ -100,7 +105,7 @@ with c1:
 ############################################################################################################
 st.write(""" ## Wales Transfer From CEX Vs Near Price """)
 
-st.write("""    """)
+st.write("""  The top 20 whales made a massive number of transactions on the CX exchange on February 8, but the volume did not confirm. Although the number of from CEX exchanges on February 9 was lower than the previous day, the volume of these transfers was three times higher than on February 8, and as expected, on February 11 and 12, the volume of transfers dropped significantly. The top 20 whales' behaviour over the course of these two weeks was often difficult to comprehend, and we were unable to identify any consistent pattern in their behaviour. """)
 
 # Transfer from CEX Vs Near Price
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
