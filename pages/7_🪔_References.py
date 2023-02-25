@@ -13,7 +13,7 @@ week_days = ['Monday', 'Tuesday', 'Wednesday',
 # Layout
 st.set_page_config(page_title='Aknowledgement - Insight of the Week',
                    page_icon=':bar_chart:', layout='wide')
-st.title('🪔 Refrences')
+st.title('🪔 References')
 
 # Style
 with open('style.css')as f:
