@@ -66,7 +66,7 @@ with c2:
     """)
 
 with c3:
-    st.image(Image.open('Images/codes.jpg'), width=320)
+    st.image(Image.open('Images/codes2.jpg'), width=320)
 
 
 st.text(" \n")
