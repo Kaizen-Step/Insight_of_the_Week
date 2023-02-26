@@ -38,7 +38,7 @@ df = USers_NEAR
 st.write(""" ### Crypto Wallet Concept ##  """)
 
 st.write("""
-A crypto wallet (cryptocurrency wallet) is software or hardware that enables users to store and use cryptocurrency.Crypto wallets keep your private keys – the passwords that give you access to your cryptocurrencies – safe and accessible, allowing you to send and receive cryptocurrencies like Bitcoin and Ethereum. They come in many forms, from hardware wallets like Ledger (which looks like a USB stick) to mobile apps like Coinbase Wallet, which makes using crypto as easy as shopping with a credit card online. [[9]](https://www.coinbase.com/learn/crypto-basics/what-is-a-crypto-wallet)  
+A crypto wallet (cryptocurrency wallet) is software or hardware that enables users to store and use cryptocurrency.Crypto wallets keep your private keys – the passwords that give you access to your cryptocurrencies – safe and accessible, allowing you to send and receive cryptocurrencies like Bitcoin and Ethereum. They come in many forms, from hardware wallets like Ledger (which looks like a USB stick) to mobile apps like Coinbase Wallet, which makes using crypto as easy as shopping with a credit card online. [[9]](https://www.coinbase.com/learn/crypto-basics/what-is-a-crypto-wallet)     
 In this dashboard, each wallet represents a user who uses the wallet, and these two notions are used interchangeably, active wallets are those that have had one or more transactions in a given time period.  Let's see if this price increase brings in any new users.  """)
 
 
@@ -93,10 +93,11 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 st.text(" \n")
 
-st.info(""" #### Key Finding: ####
+st.info(""" #### Summary: ####
 
- * New Users also showed positive corrolation with NEAR prices especially on 14 and 15 of February 
- * while Active Useres did not showed any corrolation wiht price and remained relatively stable for the whole period
+ * The number of new wallets has dramatically increased as a result of the price hike  
+ * Among the features we covered in this dashboard, New Wallets was the most relevance witn NEAR price
+ * The number of active wallets remained relatively stable
 
 
 """)

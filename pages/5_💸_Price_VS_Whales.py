@@ -105,7 +105,7 @@ with c1:
 ############################################################################################################
 st.write(""" ## Wales Transfer From CEX Vs Near Price """)
 
-st.write("""  The top 20 whales made a massive number of transactions on the CX exchange on February 8, but the volume did not confirm. Although the number of from CEX exchanges on February 9 was lower than the previous day, the volume of these transfers was three times higher than on February 8, and as expected, on February 11 and 12, the volume of transfers dropped significantly. The top 20 whales' behaviour over the course of these two weeks was often difficult to comprehend, and we were unable to identify any consistent pattern in their behaviour. """)
+st.write("""  The top 20 whales made a massive number of transactions on the CX exchange on February 8, but the volume did not confirm. Although the number of from CEX exchanges on February 9 was lower than the previous day, the volume of these transfers was three times higher than on February 8, and as expected, on February 11 and 12, the volume of transfers dropped significantly. The top 20 whales' behaviour over the course of these two weeks was often difficult to comprehend, and we were unable to identify any consistent pattern in their behaviour. Despite the fact that the number of transactions to and from CEX differed, the amount of transfers was quite similar. """)
 
 # Transfer from CEX Vs Near Price
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -136,6 +136,7 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 
 st.write(""" ## Whales Transfer To CEX Vs Near Price """)
+st.write("""  The number of whale transfers to CEX transactions risen dramatically on February 8, when the price began to decline. The volume and number of CEX transactions were both substantial on the following days, and the price continued to decline. As it was difficult to understand the whales' transfer pattern, it is possible that these findings are coincidental. """)
 
 # Transfer To CEX Vs Near Price
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -169,7 +170,7 @@ st.text(" \n")
 
 st.info(""" #### Summary: ####
 
- * Top 20 Whales had a huge impact on NEAR price fall in April and September of 2022
- * Each time whales transfer a significant amount of NEAR from exchanges, it was likely to transfer it back in only a couple of days  
- * NEAR price experienced the rise from the start of 2023, and whales confirm this increase
+ * The top 20 whales confirmed the price drop on February 8, but this confirmation was not solid due to CEX transfers of the same amount on the same day.
+ * Despite the fact that the number of transactions to and from CEX differed, the amount of transfers was quite similar.  
+ * The NEAR price has risen since February 13, and whales have confirmed this rise.
 """)

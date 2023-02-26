@@ -6,8 +6,7 @@ from PIL import Image
 st.set_page_config(page_title='Insight of the Week',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title(' Insight of the Week 🪔')
-
-
+st.text(" \n")
 # Content
 c1, c2 = st.columns(2)
 
@@ -20,7 +19,7 @@ with c1:
 with c2:
     st.text(" \n")
     st.text(" \n")
-    st.image(Image.open('Images/Bitcoin.jpg'))
+    st.image(Image.open('Images/Bitcoin-Cropped.jpg'))
 
 
 st.write("""
@@ -36,8 +35,7 @@ Despite macroeconomic headwinds and regulatory crackdowns on crypto, Bitcoin has
 The price of BTC then took a big dip in November following the FTX crisis, which saw BTC drop to a 2022 low of 15,742 on Nov. 10. Its price began to surge in early January, increasing over 14 consecutive days from Jan. 4-17. That daily green candle streak was its second longest in the cryptocurrency’s 14-year history — having fallen one day short of its 15-day record set in November 2013.[[2]](https://cointelegraph.com/news/bitcoin-price-hits-25k-in-new-2023-high)
 
 ### Bitcoin Price Correlation With Cryptocurrencies ###
- Bitcoin movement tends to determine the overall direction of crypto currencies, just as the S&P 500 index tends to determine overall stock market direction.This symbiotic relationship means that the value of different crypto currencies is often tied to Bitcoin. As a result, an crypto currencies value is often measured against the price of Bitcoin, so the price of crypto currencies could go down if Bitcoin goes down, and conversely, the price of crypto currencies could go up if Bitcoin goes up. [[3]](3.https://www.linkedin.com/pulse/relationship-between-bitcoin-altcoins-charles-j-phua/)  
- 
+Similar to how the S&P 500 index tends to dictate the general direction of the stock market, the movement of bitcoin tends to dictate the path of crypto currencies as a whole. The value of various crypto currencies is frequently correlated with Bitcoin due to this mutually beneficial connection. As a result, the value of a crypto currency is commonly compared to the price of Bitcoin, which means that if the price of Bitcoin decreases, the value of crypto currencies may as well increase, and vice versa.
 
 """)
 c1, c2 = st.columns(2)
@@ -49,7 +47,7 @@ with c2:
 st.write("""
 ## Methodology ##  
 
-The price of Bitcoin surged sharply during the past 14 days, hitting the 25K resistance line. This abrupt increase had an impact on the entire market as well as this week's sharp increase in the price of the NEAR token.The data above from last week show how NEAR pricing followed Bitcoin's upward trend and increased by more than 21% over the course of the week. As weekly "Insight of the Week" series is being run by the NEAR Foundation, We decided to take steps to investigate if whether increased price has an effect on how NEAR users behave and to identify any additional factors that may be contributing to it. In order to better comprehend the market, we first tracked the NEAR Price during the previous two weeks and compared it to the prices of Bitcoin and Ethereum as well as Matic, Solana, and Optimism, and try to find a correlation between the NEAR Price and other tokens. Then, we examine whether or not this NEAR price rise has an appreciable influence on transactions made on the NEAR blockchain and bridges to NEAR. Finally, we look for patterns that support the price increase by tracking the top 20 whales on NEAR over the course of the previous 14 days' transactions to and from CEX exchanges.In this dashboard, we calculated and labelled transactions using the tables "near.core.fact transactions" and "near.core.fact transactions." We extract hourly NEAR prices using "near.core.fact prices" , and all of the metrics shown on this dashboard were calculated between "2023-02-05" and "2023-02-20."
+The price of Bitcoin surged sharply during the past 14 days, hitting the 25K resistance line. This abrupt increase had an impact on the entire market, as well as this week's sharp increase in the price of the NEAR token. The data above from last week shows how NEAR's price followed Bitcoin's upward trend and increased by more than 21% over the course of the week. As a weekly "Insight of the Week" series is being run by the NEAR Foundation, we decided to take steps to investigate whether increased price has an effect on how NEAR users behave and to identify any additional factors that may be contributing to it. In order to better comprehend the market, we first tracked the NEAR price during the previous two weeks and compared it to the prices of Bitcoin and Ethereum, as well as Matic, Solana, and Optimism, and tried to find a correlation between the NEAR price and other tokens. Then, we examine whether or not this NEAR price rise has an appreciable influence on transactions made on the NEAR blockchain and bridges to NEAR. Finally, we look for patterns that support the price increase by tracking the top 20 whales on NEAR over the course of the previous 14 days' transactions to and from CEX exchanges. In this dashboard, we calculated and labelled transactions using the tables "near.core.fact transactions" and "near.core.fact transactions." We extract hourly NEAR prices using "near.core.fact prices," and all of the metrics shown on this dashboard were calculated between "2023-02-05" and "2023-02-20."
 
 
 
@@ -60,19 +58,19 @@ st.write("""
 #### Sources ####  """)
 st.write("""    1.https://www.coindesk.com/learn/what-is-near-protocol-and-how-does-it-work/    
         2.https://cointelegraph.com/news/bitcoin-price-hits-25k-in-new-2023-high    
-        3.https://www.linkedin.com/pulse/relationship-between-bitcoin-altcoins-charles-j-phua/  
+        3.https://www.bybit.com/en-US/coin-price/near/    
         4.https://www.youtube.com/watch?v=lyCohdodgo8
               """)
 st.text(" \n")
 c1, c2 = st.columns(2)
 with c2:
     st.info(
-        '**Data:  [Flipside Crypto](https://flipsidecrypto.xyz/)**', icon="🧠")
+        '**Project Supervisor:  [MetricsDao](https://metricsdao.notion.site/)**', icon="👨🏻‍💼")
     st.info(
         '**Project Github:  [Insight of The Week](https://github.com/Kaizen-Step/The_Whales_of_Near)**', icon="💻")
 
 with c1:
     st.info(
-        '**Project Supervisor:  [MetricsDao](https://metricsdao.notion.site/)**', icon="👨🏻‍💼")
+        '**Data:  [Flipside Crypto](https://flipsidecrypto.xyz/)**', icon="🧠")
     st.info(
         '**Twitter:  [Ludwig.1989](https://flipsidecrypto.xyz/)**', icon="🕊️")

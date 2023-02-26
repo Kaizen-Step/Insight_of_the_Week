@@ -64,11 +64,10 @@ st.info(""" ##### In This Transaction Section you can find: ####
 
 #####################################################################################
 st.text(" \n")
-st.text(" \n")
 st.write(
     """ ## Price Change Impact on Transaction Activity [Time Intervals] """)
 
-st.write(""" In the hourly and daily charts, it is clear that on February 11, when the NEAR price hit a low of 2.16, the number of transactions dramatically reduced. And on February 14 at 5:00 AM, there was a two-hour hype in the number of transactions, which peaked at 35k hourly transactions just before the price began to rise. This hype did not last the rest of the day, as the total number of transactions on February 14  was 400k, which was even lower than the previous day. It was observed that the hourly number of transactions dramatically increased for a few hours before any abrupt price shift, whether bullish or bearish. The shift in the equilibrium between supply and demand brought on by the increase or decrease in the price of Bitcoin and Ethereum could be the cause of these hypes.
+st.write(""" The hourly and daily charts show that on February 11, when the NEAR price fell to a low of 2.16, the number of transactions dropped dramatically. And on February 14 at 5:00 AM, there was a two-hour hype in the number of transactions, which peaked at 35k hourly transactions just before the price began to rise. This hype did not last the rest of the day, as the total number of transactions on February 14 was 400k, which was even lower than the previous day. It was observed that the hourly number of transactions dramatically increased for a few hours before any abrupt price shift, whether bullish or bearish. These hypes may be the result of a change in supply and demand balance brought on by a rise or reduction in the price of Bitcoin and Ethereum. It's also intriguing that this two-hour rise in the number of transactions was not reflected in the transaction fee figures.
 
 """)
 interval = st.radio('**Time Interval**',
@@ -188,31 +187,33 @@ elif st.session_state.fees_interval == 'Hourly':
 ###########################################################################
 st.write(""" ## Transaction and Transaction Fees Comparison wiht NEAR Price """)
 
-# Total Transaction over Time VS NEAR Price
-fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
-fig.add_trace(go.Bar(x=df4["DAY"], y=df4["TOTAL_TRANSACTIONS_OVER_TIME"],
-                     name='Daily Transaction'), secondary_y=False)
-fig.add_trace(go.Line(x=df4["DAY"], y=df4["Near Price"],
-                      name="Near Price"), secondary_y=True)
-fig.update_layout(
-    title_text='Daily Transactions VS NEAR Price')
-fig.update_yaxes(
-    title_text='Daily Transaction', secondary_y=False)
-fig.update_yaxes(title_text="Near Price", secondary_y=True)
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-# Total Transaction over Time VS NEAR Price
-fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
-fig.add_trace(go.Bar(x=df4["DAY"], y=df4["TOTAL_FEES_OVER_TIME"],
-                     name="TOTAL_FEES_OVER_TIME"), secondary_y=False)
-fig.add_trace(go.Line(x=df4["DAY"], y=df4["Near Price"],
-                      name="Near Price"), secondary_y=True)
-fig.update_layout(
-    title_text=' Daily Transactions Fees VS NEAR Price')
-fig.update_yaxes(
-    title_text="Daily Transaction fees", secondary_y=False)
-fig.update_yaxes(title_text="Near Price", secondary_y=True)
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+c1, c2 = st.columns(2)
+with c1:
+    # Total Transaction over Time VS NEAR Price
+    fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
+    fig.add_trace(go.Bar(x=df4["DAY"], y=df4["TOTAL_TRANSACTIONS_OVER_TIME"],
+                         name='Daily Transaction'), secondary_y=False)
+    fig.add_trace(go.Line(x=df4["DAY"], y=df4["Near Price"],
+                          name="Near Price"), secondary_y=True)
+    fig.update_layout(
+        title_text='Daily Transactions VS NEAR Price')
+    fig.update_yaxes(
+        title_text='Daily Transaction', secondary_y=False)
+    fig.update_yaxes(title_text="Near Price", secondary_y=True)
+    st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+with c2:
+    # Total Transaction over Time VS NEAR Price
+    fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
+    fig.add_trace(go.Bar(x=df4["DAY"], y=df4["TOTAL_FEES_OVER_TIME"],
+                         name="TOTAL_FEES_OVER_TIME"), secondary_y=False)
+    fig.add_trace(go.Line(x=df4["DAY"], y=df4["Near Price"],
+                          name="Near Price"), secondary_y=True)
+    fig.update_layout(
+        title_text=' Daily Transactions Fees VS NEAR Price')
+    fig.update_yaxes(
+        title_text="Daily Transaction fees", secondary_y=False)
+    fig.update_yaxes(title_text="Near Price", secondary_y=True)
+    st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 ########################################################################################
 
@@ -220,10 +221,11 @@ st.text(" \n")
 
 st.info(""" #### Summary: ####
 
- * On February 11 when NEAR price hit the a low of 2.16 the Number of Transactions droped significantly
- * On the other hand the Transaction Fees was relatively high on very same day
+ * On February 11 when NEAR price hit the a low of 2.16 the Number of Transactions droped significantly  
+ * Just before the price increase, there was a two-hour hype in the number of transactions on February 14 (5:00 AM).
+ * this two-hour rise in the number of transactions was not reflected in the transaction fee figures
  * Hourly Number of Transaction and TPS showed very good signal before NEAR rised on February 13 
- * Before each sudden drop or rise you can see the substantial change in number of Transactions
+
 
 
 

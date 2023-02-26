@@ -82,7 +82,9 @@ st.info(""" ##### In This Near Price Change Section you can find: ####
 
 st.write(""" ## NEAR Price Correlation with Role Models ##  """)
 
-st.write(""" As expected, NEAR price had a positive correlation with Bitcoin and Ethereum, except for February 8 and 9, when NEAR hit the weekly high of 2.61, and Bitcoin and Ethereum experienced a moderate fall on the very same days. In comparison to the first week of the period, price-changing patterns were generally more similar during the week beginning on February 13, and compared to Bitcoin, Ethereum prices were more closely correlated to NEAR. The NEAR price fluctuated for a few days as Bitcoin battled to overcome the 25k resistance, then attempted to pass its monthly high of 2.65 once but failed.
+st.write(""" As expected, the NEAR price had a positive correlation with Bitcoin and Ethereum, except for February 8 and 9, when NEAR hit the weekly high of 2.61 and BTC and ETH experienced a moderate fall on the very same days.   
+ In comparison to the first week of the period, price-changing patterns were generally more similar during the week beginning on February 13. And Ethereum prices were more closely correlated with NEAR compared to Bitcoin.    
+ The NEAR price fluctuated for a few days as Bitcoin battled to overcome the 25k resistance, then attempted to pass its monthly high of 2.65 once but failed.
 """)
 # NEAR vs Bitcoin Price [Hourly]
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -141,7 +143,8 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 st.write(""" ## NEAR Price Correlation with Rivals ##  """)
 
-st.write(""" On February 8, Solana and Optimism prices also showed a negative correlation with NEAR, similar to Bitcoin and Ethereum, while Matic price experienced a slight rise like NEAR did. Optimism showed the most similarity and Solana was the least among rivel tokens. With the exception of Matic, which increased steadily throughout the course of the whole two-week period, the other tokens primarily fluctuated around a particular price and were unable to overcome their resistances.
+st.write(""" On February 8, Solana and Optimism prices also showed a negative correlation with NEAR, similar to Bitcoin and Ethereum, while the Matic price experienced a slight rise like NEAR did. Optimism showed the most similarity, and Solana was the least among rivel tokens.     
+ With the exception of Matic, which increased steadily throughout the course of the whole two-week period, the other tokens primarily fluctuated around a particular price and were unable to overcome their resistances.
 """)
 # NEAR vs MATIC Price [Hourly]
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -225,7 +228,8 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 ##########################################################################################
 st.write(""" ## NEAR Price Change Rate VS Role Models ##  """)
-st.write(""" As discussed earlier, NEAR swam in opposite tide of the whole market on Feb 9 to 10, and while the market was bearish it rose almost 2%. For the rest of the period, it confirmed the whole market move, and followed the same pattern as Bitcoin and Ethereum.
+st.write(""" As discussed earlier, NEAR swam in the opposite direction of the whole market on February 9–10, and while the market was bearish, it rose almost 2%.     
+ For the rest of the period, it confirmed the whole market move and followed the same pattern as Bitcoin and Ethereum.
 """)
 # Hourly Price Change Comprison
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -297,7 +301,8 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 ############################################################################
 
 st.write(""" ## Near Price Standard Moving Averages ##  """)
-st.write(""" Simple standard   Moving averages are known to have a delay, and in this case, almost all of them displayed a bearish tendency while the price rose by 21% in the second week of the period. There was no meaningful moving average resistance on the charts, and the price crossed its moving averages a couple of times.
+st.write(""" Simple standard Moving averages are known to have a delay, and in this case, almost all of them displayed a bearish tendency while the price rose by 21% in the second week of the period.     
+ There was no meaningful moving average resistance on the charts, and the price crossed its moving averages a couple of times.
 """)
 # NEAR Price Moving averages [Hourly]
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -341,10 +346,10 @@ st.text(" \n")
 
 st.info(""" #### Summary: ####
 
- * Near Price Correlate with Ethereum more than Bitcoin Price
- * Among NEAR rivales Optimism showed the most similarity to NEAR Price
- * Solana was not correlated with NEAR compared to other tokens
- * There were no Token which showed a negative correlation with Bitcoin or Ethereum
-
+ * Except one or two days (February 9) NEAR price positively correlated with Bitcoin and Ethereum  
+ * Ethereum prices were more closely correlated to NEAR compared to Bitcoin  
+ * The NEAR price fluctuated for a few days as Bitcoin battled to overcome the 25k resistance   
+ * Optimism showed the most similarity and Solana was the least among rivel tokens    
+ * There was no meaningful moving average resistance on the charts, and the price easily crossed its moving averages a couple of times
 
 """)

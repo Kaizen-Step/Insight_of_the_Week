@@ -4,6 +4,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.subplots as sp
+from PIL import Image
+
 
 # Global Variables
 theme_plotly = None  # None or streamlit
@@ -19,23 +21,23 @@ st.title('🪔 References')
 with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Aknowledgement
-st.write(""" ##     Aknowledgement 
-We are grateful to all who helped us develop this project specially [**Mr. Ali Taslimi**](https://twitter.com/AliTslm) with comprehensive streamlit open source project [Cross chain Monitoring](https://github.com/alitslm/cross_chain_monitoring) that provides streamlit functions and tools and 0xHaM☰d Near Mega Dashboard top20 users query that helped us a lot.
-And also ****Flipside Crypto**** with massive database and last but not least ****MetricsDao**** that is the reason behind this project.
-""")
-
 
 # SQL Codes
 st.write(""" ## SQL Codes ## """)
 
 st.write("""
-At the following links, you can find the SQL codes that are used in this dashboard: 
+We are grateful to all who helped us develop this project specially [**Mr. Ali Taslimi**](https://twitter.com/AliTslm) with comprehensive streamlit open source project [Cross chain Monitoring](https://github.com/alitslm/cross_chain_monitoring) that provides streamlit functions and tools and 0xHaM☰d Near Mega Dashboard top20 users query that helped us a lot.
+And also ****Flipside Crypto**** with massive database and last but not least ****MetricsDao**** that is the reason behind this project.
+""")
+st.write("""
+At the following links, you can find the SQL codes that are used in this dashboard:   
+  
+
 
 """)
 
 
-c1, c2 = st.columns(2)
+c1, c2, c3 = st.columns(3)
 
 with c1:
     st.write("""
@@ -45,7 +47,7 @@ with c1:
     4. [Transaction Vs Price ](https://flipsidecrypto.xyz/edit/queries/5680aacc-d8f1-4182-b9cf-b909fe32c776/visualizations/c58291a9-51f2-4ccb-abfe-dc879aee0b83)  
     5. [Transaction and Fees (Hour-Day_Weekly) ](https://flipsidecrypto.xyz/edit/queries/45b350c2-1a32-40b3-a846-ce57687ea395/visualizations/c9b3fcd6-db9e-4d0e-b58e-2ac36b90071d)  
     6. [Price Daily Vs Tokens](https://flipsidecrypto.xyz/edit/queries/7338fdfa-b6a8-42f2-b829-e2181142a575)  
-    7. [The Whale Impact prices CEX to](https://flipsidecrypto.xyz/edit/queries/f76adceb-291e-45b5-ba7e-a0b2a9286bef/visualizations/45d83e16-de7c-4e43-88aa-9be9188475ca)  
+    7. [The Whale list](https://flipsidecrypto.xyz/edit/queries/f76adceb-291e-45b5-ba7e-a0b2a9286bef/visualizations/45d83e16-de7c-4e43-88aa-9be9188475ca)  
 
     """)
 
@@ -63,9 +65,22 @@ with c2:
     14. [The Whale Impact prices CEX to](https://flipsidecrypto.xyz/edit/queries/4272c321-66da-4f53-8929-e91d99fe70c6)  
     """)
 
+with c3:
+    st.image(Image.open('Images/codes.jpg'), width=320)
+
+
+st.text(" \n")
+st.text(" \n")
 
 # Sources
 st.write(""" ## Sources ## """)
+
+st.write("""
+Here are the reference numbers for all of the sources used in this project:
+  
+
+
+""")
 
 st.write("""
 1.https://www.coindesk.com/learn/what-is-near-protocol-and-how-does-it-work/      
@@ -73,7 +88,7 @@ st.write("""
         3.https://www.linkedin.com/pulse/relationship-between-bitcoin-altcoins-charles-j-phua/    
         4.https://www.youtube.com/watch?v=lyCohdodgo8     
         5.https://www.coindesk.com/tech/2023/02/08/bitcoin-nfts-explode-in-popularity-as-bitmex-research-shows-13000-ordinals/    
-        6.https://www.bybit.com/en-US/coin-price/near/)        
+        6.https://www.bybit.com/en-US/coin-price/near/         
         7.https://www.bitstamp.net/learn/crypto-101/how-do-cryptocurrency-transactions-work/  
         8.https://www.coindesk.com/learn/what-are-blockchain-bridges-and-how-do-they-work/  
         9.https://www.coinbase.com/learn/crypto-basics/what-is-a-crypto-wallet  

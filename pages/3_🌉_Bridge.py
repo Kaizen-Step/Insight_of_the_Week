@@ -39,7 +39,7 @@ df2 = Weekly_Bridge_NEAR
 
 
 #################################################################################################
-st.write(""" ### Bridge Concept ##  """)
+st.write(""" ### Blockchain Bridge Concept ##  """)
 
 st.write("""
 A blockchain bridge is a tool that lets you port assets from one blockchain to another, solving one of the main pain points within blockchains – a lack of interoperability.
@@ -63,7 +63,9 @@ st.info(""" ##### In This Bridge Section you can find: ####
 #################################################################################################
 st.write(""" ## Rainbow Bridge to NEAR Number of Transactions """)
 
-st.write(""" On February 11, which was previously discussed as the day the NEAR price hit its monthly low, there was no bridge transaction. Moreover, February 12 came in second-to-last, while February 15—the day with the most bridge transactions to NEAR—saw a notable increase in the price of NEAR. 53% of these transaction was from USDC follow by USDT with 17% . As you can see, the number of bridge transactions on February 18 was the same as February 8 and 6, and the number of bridge transactions on the first week of the period when NEAR experienced a significant fall was not lower than February 16, which was the day after NEAR increased. As a result, this increase did not significantly alter the rhythm other than for one or two hype days.
+st.write(""" On February 11, which was previously discussed as the day the NEAR price hit its monthly low of 2.16 USD, there was no bridge transaction to NEAR. Moreover, February 12 came in second-to-last, while February 15—the day with the most bridge transactions to NEAR—saw a notable increase in the price of NEAR.  
+USDC accounted for 53% of these transactions, and USDT came in second with 17%. As you can see, the number of bridge transactions on February 18 was the same as on February 8 and 6, and the number of bridge transactions on the first week of the period, when NEAR experienced a significant fall, was not lower than February 16, which was the day after NEAR increased.    
+As a result, this increase did not significantly alter the rhythm other than for one or two hype days.
 """)
 # Daily Bridge Transactions
 fig = px.bar(df.sort_values(["DATE", "NUMBER_TRANSACTIONS"], ascending=[
@@ -150,11 +152,11 @@ st.text(" \n")
 
 st.info(""" #### Summary: ####
 
- * USDC was the top token bridged to NEAR with more than 50% of total Number of Bridges
- * USDT and WOO followed USDC wiht a Significant difference  
- * There was no Bridge transaction on 11 Feb which was the day that NEAR exprienced the whole period low
- * The Number of Bridge to NEAR significantly increased when NEAR prices rised
 
-
+* There were no bridge transactions on February 11, the day NEAR reached its all-time low  
+* USDC was the most bridged token to NEAR, accounting for more than half of all bridges  
+* The price increase did not alter the number of bridge-to-NEAR transactions, other than one or two days  
+* While the volume of bridge transactions was significantly influenced  
+* The number of users who bridge Ethereum to NEAR was also affected by the NEAR price, but this effect was not massive as far as volume was concerned  
 
 """)
