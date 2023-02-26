@@ -65,9 +65,6 @@ with c2:
     14. [The Whale Impact prices CEX to](https://flipsidecrypto.xyz/edit/queries/4272c321-66da-4f53-8929-e91d99fe70c6)  
     """)
 
-with c3:
-    st.image(Image.open('Images/codes2.jpg'), width=320)
-
 
 st.text(" \n")
 st.text(" \n")
